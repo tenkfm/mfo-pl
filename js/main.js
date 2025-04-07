@@ -2,10 +2,10 @@ $(document).ready(function (){
     $('#phone-main').mask("+7 (000) 000-00-00", {placeholder: "+7 (xxx) xxx-xx-xx"});
 
     $('#summ_slider').ionRangeSlider({
-        min: 10000,
-        max: 500000,
-        from: 75000,
-        step: 500,
+        min: 1000,
+        max: 30000,
+        from: 5000,
+        step: 100,
         hide_min_max: true,
         hide_from_to: true,
         skin: 'round',
@@ -21,7 +21,7 @@ $(document).ready(function (){
 
     $('#days_slider').ionRangeSlider({
         min: 5,
-        max: 30,
+        max: 60,
         from: 10,
         hide_min_max: true,
         hide_from_to: true,
@@ -56,12 +56,12 @@ $(document).ready(function (){
         let percentSale = parseInt(money) * 0.01 * days;
         let getMoney = parseInt(money) + percent;
         let getMoneySale = parseInt(money) + percentSale;
-        $('.money-current').html(money + '<span> тнг</span>');
+        $('.money-current').html(money + '<span> zł.</span>');
 
         let moneyTake = Math.round(money).toLocaleString('en-US');
         moneyTake = moneyTake.replace(/,/g, " ");
-        $('.information.take .money').text(moneyTake + ' тнг');
-        // $('.button-main .money-btn').text(moneyTake + ' тнг');
+        $('.information.take .money').text(moneyTake + ' zl.');
+        // $('.button-main .money-btn').text(moneyTake + ' zł.');
 
         // let percentVal = Math.round(percent).toLocaleString('en-US');
         let percentVal = percent.toLocaleString('en-US');
@@ -86,7 +86,7 @@ $(document).ready(function (){
         let getMoney = parseInt(money) + percent;
         let getMoneySale = parseInt(money) + percentSale;
 
-        $('.days-current').html(days + '<span> дней</span>');
+        $('.days-current').html(days + '<span> dni</span>');
 
         let moneyTake = Math.round(money).toLocaleString('en-US');
         moneyTake = moneyTake.replace(/,/g, " ");

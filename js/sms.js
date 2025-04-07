@@ -32,36 +32,33 @@ class Action {
 }
 
 const haveCreditsFlow = new Flow([
-    new OperMessage("Выберите компании в которых у вас были займы:", null, new Action(Action.showCurrentOffers, null)),
-    new OperMessage("Какую сумму вы хотели бы получить?", [
-        new Answer("До 100.000 тнг", null, "amount_select_100"),
-        new Answer("100.000 - 300.000 тнг", null, "amount_select_100-300"),
-        new Answer("Больше 300.000 тнг 💰", null, "amount_select_300+"),
+    new OperMessage("Wybierz firmy, w których miałeś pożyczki:", null, new Action(Action.showCurrentOffers, null)),
+    new OperMessage("Jaką kwotę chciałbyś otrzymać?", [
+        new Answer("Do 10.000 zł", null, "amount_select_100"),
+        new Answer("10.000 - 20.000 zł", null, "amount_select_100-300"),
+        new Answer("Powyżej 20.000 zł 💰", null, "amount_select_300+"),
     ], null),
-    new OperMessage("Отлично! Я провожу автоматическую верификацию", null, null),
-    new OperMessage("🎉🎁💰 Вам предварительно одобрен запрашиваемый кредит. Его можно получить в этих организациях:", null, new Action(Action.showOffers, null))
+    new OperMessage("Super! Właśnie przeprowadzam automatyczną weryfikację.", null, null),
+    new OperMessage("🎉🎁💰 Masz wstępnie zatwierdzony kredyt, który możesz odebrać w tych firmach:", null, new Action(Action.showOffers, null))
 ]);
-
 const noCreditsFlow = new Flow([
-    new OperMessage("Какую сумму вы хотели бы получить?", [
-        new Answer("До 100.000 тнг", null, "amount_select_100"),
-        new Answer("100.000 - 300.000 тнг", null, "amount_select_100-300"),
-        new Answer("Больше 300.000 тнг 💰", null, "amount_select_300+"),
+    new OperMessage("Jaką kwotę chciałbyś otrzymać?", [
+        new Answer("Do 10.000 zł", null, "amount_select_100"),
+        new Answer("10.000 - 20.000 zł", null, "amount_select_100-300"),
+        new Answer("Powyżej 20.000 zł 💰", null, "amount_select_300+"),
     ], null),
-    new OperMessage("Отлично! Я провожу автоматическую верификацию", null, null),
-    new OperMessage("🎉🎁💰 Вам предварительно одобрен запрашиваемый кредит. Его можно получить в этих организациях:", null, new Action(Action.showOffers, null))
+    new OperMessage("Super! Właśnie przeprowadzam automatyczną weryfikację.", null, null),
+    new OperMessage("🎉🎁💰 Masz wstępnie zatwierdzony kredyt, który możesz odebrać w tych firmach:", null, new Action(Action.showOffers, null))
 ]);
-
 // Flows
 const mainFlow = new Flow([
-    new OperMessage("Добрый день 👋", null, null),
-    new OperMessage("Меня зовут Аружан, я найду для вас лучшее предложение по микрозайму.", null, null),
-    new OperMessage("У вас были когда либо микрозаймы?", [
-        new Answer("Да", new Action(Action.actionChangeFlow, haveCreditsFlow), "have_credits"),
-        new Answer("Нет", new Action(Action.actionChangeFlow, noCreditsFlow), "no_credits"),
+    new OperMessage("Cześć, jestem Ewa 👋", null, null),
+    new OperMessage("Znajdę dla Ciebie najlepszą ofertę pożyczki online.", null, null),
+    new OperMessage("Czy kiedykolwiek miałeś pożyczki online lub kredyt internetowy?", [
+        new Answer("Tak", new Action(Action.actionChangeFlow, haveCreditsFlow), "have_credits"),
+        new Answer("Nie", new Action(Action.actionChangeFlow, noCreditsFlow), "no_credits"),
     ], null),
 ]);
-
 var currentFlow = mainFlow
 var currentMessageIndex = 0;
 var bottomChatViewId = 'offers-select';

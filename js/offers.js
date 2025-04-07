@@ -45,9 +45,9 @@ document.addEventListener("DOMContentLoaded", function() {
             randomSymbol = moneySymbols[Math.floor(Math.random() * moneySymbols.length)];
 
             if(idx == 0 || idx == 1) {
-                labelDiv = `<div class="label red">Лучшее для тебя</div>`;
+                labelDiv = `<div class="label red">Najlepsze dla Ciebie</div>`;
             } else if(idx == 2) {
-                labelDiv = `<div class="label yellow">Быстрая выдача</div>`;
+                labelDiv = `<div class="label yellow">Szybka wypłata</div>`;
             } else {
                 labelDiv = '';
             }
@@ -70,18 +70,18 @@ document.addEventListener("DOMContentLoaded", function() {
             </a>
             <ul class="offer-info">
                 <li>
-                <span class="text">Срок до:</span>
+                <span class="text">Okres do:</span>
                 <span class="bold">${offerData.duration}</span>
                 </li>
                 <li>
-                <span class="text">Ставка:</span>
+                <span class="text">Oprocent.:</span>
                 <span class="bold colored">${offerData.interest}</span>
                 </li>
             </ul>
             <div class="general_button_wrapper">
                 <div class="button">
                 <a class="btn-main" target="_blank" href="${offerData.url}" onclick="return goUrl(this, '${offerId}');">
-                    Получить ${randomSymbol}
+                    Odbierz ${randomSymbol}
                 </a>
                 </div>
             </div>

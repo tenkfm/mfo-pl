@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="pl">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <meta name="theme-color" content="#fff">
   <meta name="format-detection" content="telephone=no">
-  <meta name="facebook-domain-verification" content="5yalgfhyf7tgmu1xng1u3nuhh8bghh">
   <link rel="shortcut icon" href="images/favicon.png">
 
-  <title>Credity.kz - онлайн кредит на карту</title>
+  <title>kreddy.pl - kredyt online na kartę</title>
   <link rel="stylesheet" media="all" href="css/main.css">
   <link rel="stylesheet" media="all" href="css/g.css">
   <link rel="stylesheet" media="all" href="css/ion.rangeSlider.css">
@@ -29,10 +28,10 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f7f7f7;
       display: flex;
       flex-direction: column;
       height: 100vh;
+      background: linear-gradient(90deg, #f7f7f7 0%, #f7f7f7 50%, #f7f7f7 100%);
     }
 
     a {
@@ -40,13 +39,13 @@
     }
 
     #header {
-      background-color: white;
       color: #4b5563;
       padding: 20px;
       text-align: center;
       font-size: 1.3em;
       font-weight: bold;
       font-family: "ui-serif";
+      background-color: #fff;;
     }
 
     .text-red {
@@ -97,7 +96,6 @@
       flex-grow: 1;
       /* overflow-y: auto; */
       padding: 15px;
-      background-color: #ffffff;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
@@ -232,6 +230,15 @@
       scroll-behavior: smooth;
     }
 
+    .sms-body {
+      background-image: url("images/background.jpg");
+      background-color: rgba(255,255,255,0.8);
+      background-blend-mode: lighten;
+      background-repeat: repeat;
+      background-size: 300px;
+    }
+
+
   </style>
 
       <!-- TikTok Pixel Code Start -->
@@ -248,20 +255,19 @@
     </script>
     <!-- TikTok Pixel Code End -->
 </head>
-<body style="background-color: #fff;">
-  <div class="main" id="main" style="background-color: #fff; padding: 0px;">
+<body>
+  <div class="main sms-body" id="main">
     
     <div id="header">
       <div id="himage-container">
       </div>
-      <span class="text-red">Внимание:</span>
-      <div class="details" id="header-text">Спец предложение для заемщиков с активными микрокредитами. Возьми займ для погашения текущего кредита, до 500,000 тнг под 0.01% <div class="text-red"> (успей до 20.04.2025)</div>
-      <!-- <div class="details">Весеннее специальное предложение на микрокредиты. Пониженные ставки на кредиты в новых организациях, до 500,000 тнг под 0.01% <div class="text-red"> (успей до 20.04.2025)</div> -->
+      <span class="text-red">Uwaga:</span>
+      <div class="details" id="header-text">Specjalna oferta dla pożyczkobiorców z kredytem gotówkowym. Pożyczka na spłatę bieżącego kredytu, do 30 000 zł z oprocentowaniem 0,01% <div class="text-red"> (Tylko do 20.04.2025)</div>      <!-- <div class="details">Весеннее специальное предложение на микрокредиты. Пониженные ставки на кредиты в новых организациях, до 500,000 тнг под 0.01% <div class="text-red"> (успей до 20.04.2025)</div> -->
       </div>
       <div class="operator-container">
           <div class="operator-name" style="display: flex; align-items: center;">
             <div class="online"></div>
-            Аружан в сети
+            Ewa online
           </div>  
         </div>
     </div>
@@ -311,7 +317,7 @@
                     <div class="general_button_wrapper" style="width: 100%;" id="select-offer-button">
                       <div class="button">
                           <a class="btn-main" target="_blank" onclick="return doneSelectOffer(this);">
-                            Готово
+                            DALEJ
                           </a>
                       </div>
                     </div>
@@ -355,7 +361,7 @@
       return false;
     }
   </script>
-  <script src="js/generate.js" source="credity.kz" async=""></script>
+  <script src="js/generate.js" source="kreddy.pl" async=""></script>
 
   <!-- Keitaro tracking script -->
   <script type='application/javascript'>

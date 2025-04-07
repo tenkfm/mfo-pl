@@ -167,11 +167,10 @@ ul li {
 }
 
 /* MAIN */
-.main{
+.main {
 /*    background: linear-gradient(164.6deg, #ffa479 0%, #ff8488 100%) fixed;*/
     height: 100%;
     padding-bottom: 40px;
-    padding-top: 10px;
 }
 /* BUTTON */
 .main .general_button_wrapper{
