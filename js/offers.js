@@ -15,7 +15,7 @@ const offersData = {
     29: new Offer(logo="/images/banks/wandoopl.svg", url="{offer}&offer_id=29", duration="30 dni", interest="5.000 zł"),
     30: new Offer(logo="/images/banks/fenikopl.png", url="{offer}&offer_id=30", duration="60 dni", interest="5.000 zł"),
     31: new Offer(logo="/images/banks/solcreditopl.svg", url="{offer}&offer_id=31", duration="120 dni", interest="5.000 zł"),
-    32: new Offer(logo="/images/banks/smart-pozyczka-logopl.svg", url="{offer}&offer_id=32", duration="30 dni", interest="15.000 zł"),
+    32: new Offer(logo="/images/banks/smartpl.svg", url="{offer}&offer_id=32", duration="30 dni", interest="15.000 zł"),
     33: new Offer(logo="/images/banks/pozychkapluspl.svg", url="{offer}&offer_id=33", duration="30 dni", interest="15.000 zł"),
     34: new Offer(logo="/images/banks/pankredytpl.svg", url="{offer}&offer_id=34", duration="60 m-cy", interest="150.000 zł"),
     
