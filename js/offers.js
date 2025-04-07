@@ -11,21 +11,18 @@ const moneySymbols = ["💵", "💰", "💸", "💳", "💶", "💷"];
 
 // Динамически загружаем только те оферы, которые есть в массиве offerIdsArray
 const offersData = {
-    10: new Offer(logo="/images/banks/zaimer.png", url="{offer}&offer_id=10", duration="12 мес", interest="0.1%"),
-    12: new Offer(logo="/images/banks/moneymankz.svg", url="{offer}&offer_id=12", duration="30 дн", interest="0.01%"),
-    13: new Offer(logo="/images/banks/onecreditkz.svg", url="{offer}&offer_id=13", duration="20 дн", interest="0.01%"),
-    14: new Offer(logo="/images/banks/credity360.png", url="{offer}&offer_id=14", duration="30 дн", interest="0.01%"),
-    15: new Offer(logo="/images/banks/creditbarkz.svg", url="{offer}&offer_id=15", duration="30 дн", interest="0.1%"),
-    16: new Offer(logo="/images/banks/creditpluskz.svg", url="{offer}&offer_id=16", duration="30 дн", interest="0.1%"),
-    20: new Offer(logo="/images/banks/acreditkz.png", url="{offer}&offer_id=20", duration="25 дн", interest="0.01%"),
-    23: new Offer(logo="/images/banks/turbomoneykz.png", url="{offer}&offer_id=23", duration="20 дн", interest="0.1%"),
-    24: new Offer(logo="/images/banks/gmoneykz.svg", url="{offer}&offer_id=24", duration="20 дн", interest="0.29%"),
-
-    21: new Offer(logo="/images/banks/finlitekz.svg", url="{offer}&offer_id=21", duration="30 дн", interest="0.01%"),
-    22: new Offer(logo="/images/banks/cashradarkz.svg", url="{offer}&offer_id=22", duration="30 дн", interest="0.01%"),
-    25: new Offer(logo="/images/banks/easycashkz.svg", url="{offer}&offer_id=25", duration="60 дн", interest="0.1%"),
-    26: new Offer(logo="/images/banks/excashkz.svg", url="{offer}&offer_id=26", duration="180 дн", interest="0.1%"),
-    27: new Offer(logo="/images/banks/fincashkz.svg", url="{offer}&offer_id=27", duration="180 дн", interest="0.1%"),
+    28: new Offer(logo="/images/banks/avafinpl.svg", url="{offer}&offer_id=28", duration="30 dni", interest="15.000 zł"),
+    29: new Offer(logo="/images/banks/wandoopl.svg", url="{offer}&offer_id=29", duration="30 dni", interest="5.000 zł"),
+    30: new Offer(logo="/images/banks/fenikopl.png", url="{offer}&offer_id=30", duration="60 dni", interest="5.000 zł"),
+    31: new Offer(logo="/images/banks/solcreditopl.svg", url="{offer}&offer_id=31", duration="120 dni", interest="5.000 zł"),
+    32: new Offer(logo="/images/banks/smart-pożyczka-logopl.svg", url="{offer}&offer_id=32", duration="30 dni", interest="15.000 zł"),
+    33: new Offer(logo="/images/banks/pozychkapluspl.svg", url="{offer}&offer_id=33", duration="30 dni", interest="15.000 zł"),
+    34: new Offer(logo="/images/banks/pankredytpl.svg", url="{offer}&offer_id=34", duration="60 m-cy", interest="150.000 zł"),
+    
+    35: new Offer(logo="/images/banks/CashBropl.svg", url="{offer}&offer_id=35", duration="24 m-cy", interest="15.000 zł"),
+    36: new Offer(logo="/images/banks/Credy_PL_CPSpl.svg", url="{offer}&offer_id=36", duration="30 dni", interest="2.000 zł"),
+    37: new Offer(logo="/images/banks/Finansowo_PL_CPLV_CPSpl.svg", url="{offer}&offer_id=37", duration="36 m-cy", interest="30.000 zł"),
+    38: new Offer(logo="/images/banks/logo-BbqriXL3pl.svg", url="{offer}&offer_id=38", duration="24 m-cy", interest="30.000 zł")
 };
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -33,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const urlParams = new URLSearchParams(window.location.search);
     var offersIds = urlParams.get("offers_ids");  // например, "zaimerkz,moneymankz,onecreditkz"
     if (!offersIds) {
-        offersIds="13 21 22 20 10 12 14 16";
+        offersIds="28 29 31 32 33 34 38 35 30";
     }
 
     const offerIdsArray = offersIds.split(' ');
@@ -47,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if(idx == 0 || idx == 1) {
                 labelDiv = `<div class="label red">Najlepsze dla Ciebie</div>`;
             } else if(idx == 2) {
-                labelDiv = `<div class="label yellow">Szybka wypłata</div>`;
+                labelDiv = `<div class="label yellow">Wypłata w 10 minut</div>`;
             } else {
                 labelDiv = '';
             }
@@ -74,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 <span class="bold">${offerData.duration}</span>
                 </li>
                 <li>
-                <span class="text">Oprocent.:</span>
+                <span class="text">Kwota:</span>
                 <span class="bold colored">${offerData.interest}</span>
                 </li>
             </ul>

@@ -34,20 +34,20 @@ class Action {
 const haveCreditsFlow = new Flow([
     new OperMessage("Wybierz firmy, w których miałeś pożyczki:", null, new Action(Action.showCurrentOffers, null)),
     new OperMessage("Jaką kwotę chciałbyś otrzymać?", [
-        new Answer("Do 10.000 zł", null, "amount_select_100"),
-        new Answer("10.000 - 20.000 zł", null, "amount_select_100-300"),
-        new Answer("Powyżej 20.000 zł 💰", null, "amount_select_300+"),
+        new Answer("Do 3.000 zł", null, "amount_select_100"),
+        new Answer("3.000 - 7.000 zł", null, "amount_select_100-300"),
+        new Answer("Powyżej 7.000 zł 💰", null, "amount_select_300+"),
     ], null),
-    new OperMessage("Super! Właśnie przeprowadzam automatyczną weryfikację.", null, null),
+    new OperMessage("Super!👍 Właśnie przeprowadzam automatyczną weryfikację.", null, null),
     new OperMessage("🎉🎁💰 Masz wstępnie zatwierdzony kredyt, który możesz odebrać w tych firmach:", null, new Action(Action.showOffers, null))
 ]);
 const noCreditsFlow = new Flow([
     new OperMessage("Jaką kwotę chciałbyś otrzymać?", [
-        new Answer("Do 10.000 zł", null, "amount_select_100"),
-        new Answer("10.000 - 20.000 zł", null, "amount_select_100-300"),
-        new Answer("Powyżej 20.000 zł 💰", null, "amount_select_300+"),
+        new Answer("Do 3.000 zł", null, "amount_select_100"),
+        new Answer("3.000 - 7.000 zł", null, "amount_select_100-300"),
+        new Answer("Powyżej 7.000 zł 💰", null, "amount_select_300+"),
     ], null),
-    new OperMessage("Super! Właśnie przeprowadzam automatyczną weryfikację.", null, null),
+    new OperMessage("Super!👍 Właśnie przeprowadzam automatyczną weryfikację.", null, null),
     new OperMessage("🎉🎁💰 Masz wstępnie zatwierdzony kredyt, który możesz odebrać w tych firmach:", null, new Action(Action.showOffers, null))
 ]);
 // Flows
