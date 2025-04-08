@@ -42,9 +42,9 @@ document.addEventListener("DOMContentLoaded", function() {
             randomSymbol = moneySymbols[Math.floor(Math.random() * moneySymbols.length)];
 
             if(idx == 0 || idx == 1) {
-                labelDiv = `<div class="label red">Najlepsze dla Ciebie</div>`;
+                labelDiv = `<div class="label red">Najlepsza opcja</div>`;
             } else if(idx == 2) {
-                labelDiv = `<div class="label yellow">Wypłata w 10 minut</div>`;
+                labelDiv = `<div class="label yellow">Szybka wypłata</div>`;
             } else {
                 labelDiv = '';
             }
